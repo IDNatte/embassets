@@ -26,15 +26,8 @@ proc loadAssets*(data: seq[Table[system.string, system.string]]): string =
     discard
 
 macro embedAssets*(src: static[string]): untyped =
-  when system.hostOS == "windows":
-    let cwd = staticExec("powershell -Command \"(Get-Location).path\"")
-  elif system.hostOS == "linux":
-    let cwd = staticExec("pwd")
-  else:
-    let cwd = newLit(nnkNilLit)
-
-  let absPath =  joinPath(cwd, src)
-  echo absPath
+  let cwd = currentSourcePath()
+  let absPath =  parentDir(cwd)
 
   var elements = newSeq[NimNode]()
   for path in walkDirRec(absPath):
