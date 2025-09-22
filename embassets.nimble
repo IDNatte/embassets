@@ -7,9 +7,9 @@ license       = "BSD-3-Clause"
 srcDir        = "src"
 
 # debug
-installExt    = @["nim"]
-binDir        = "build"
-bin           = @["embassets_coba"]
+# installExt    = @["nim"]
+# binDir        = "build"
+# bin           = @["embassets_coba"]
 
 # Dependencies
 
