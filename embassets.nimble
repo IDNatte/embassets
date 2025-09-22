@@ -1,6 +1,6 @@
 # Package
 
-version       = "0.0.2"
+version       = "0.0.3"
 author        = "IDNatte"
 description   = "simple assets embedding in binary"
 license       = "BSD-3-Clause"
