@@ -34,6 +34,7 @@ macro embedAssets*(src: static[string]): untyped =
     let cwd = newLit(nnkNilLit)
 
   let absPath =  joinPath(cwd, src)
+  echo absPath
 
   var elements = newSeq[NimNode]()
   for path in walkDirRec(absPath):
