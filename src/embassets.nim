@@ -27,7 +27,9 @@ proc loadAssets*(data: seq[Table[system.string, system.string]]): string =
 
 macro embedAssets*(src: static[string]): untyped =
   let cwd = currentSourcePath()
-  let absPath =  parentDir(cwd)
+  let absPath = joinPath(parentDir(cwd), src)
+
+  echo absPath
 
   var elements = newSeq[NimNode]()
   for path in walkDirRec(absPath):
