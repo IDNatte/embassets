@@ -1,15 +1,10 @@
 # Package
 
-version       = "0.0.4"
+version       = "0.0.5"
 author        = "IDNatte"
 description   = "simple assets embedding in binary"
 license       = "BSD-3-Clause"
 srcDir        = "src"
-
-# debug
-# installExt    = @["nim"]
-# binDir        = "build"
-# bin           = @["embassets_coba"]
 
 # Dependencies
 
