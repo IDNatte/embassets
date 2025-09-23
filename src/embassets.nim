@@ -35,6 +35,7 @@ macro embedAssets*(src: static[string]): untyped =
   ##
   ## Parameter:
   ## - `src`: valid path of the source, use *currentSourcePath()* function to resolve it.
+  ##
   var elements = newSeq[NimNode]()
   for path in walkDirRec(src):
     let filename = fmt"{splitFile(path).name}{splitFile(path).ext}"
